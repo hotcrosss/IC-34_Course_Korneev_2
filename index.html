@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <li>Про нас</li>
-        <li>Курси</li>
-        <li>Контакти</li>
+      <ul class="navigationUl">
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Курси</a></li>
+        <li><a href="#">Контакти</a></li>
       </ul>
     </nav>
   </header>
@@ -68,7 +70,7 @@
         <li>Learn DOM Manipulation</li>
         <li>Fetch API</li>
       </ol>
-      <form action="">
+      <form action="#">
         Ім'я:<br>
         <input type="text" name="firstname" value="Mickey">
         <br>
@@ -81,10 +83,23 @@
       <a href="zvit.html">Посилання на предметну область</a>
     </main>
     <footer>
-      <ul>
-        <li>Інстаграм</li>
-        <li>Телеграм</li>
-      </ul>
-    </footer>
+      <div class="footer-container">
+          <div class="footer-logo">
+              <img src="img/LogoV3.png" alt="Site Logo">
+          </div>
+          <div class="footer-links">
+              <h1 style="text-align: center;">Contact us</h1>
+              <div>
+                <ul class="foot-ul">
+                  <li><a href="#">Instagram    <i class="fa fa-instagram" style="font-size:24px"></i></a></li>
+                  <li><a href="#">Telegram     <i class="fa fa-telegram" style="font-size:24px"></i></a></li>
+                  <li><a href="#">Facebook     <i class="fa fa-facebook-f" style="font-size:24px"></i></a></li>
+                  <li><a href="#">Github       <i class="fa fa-github" style="font-size:24px"></i></a></li>
+                </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
 </body>
 </html>
