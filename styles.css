@@ -8,10 +8,37 @@ body {
 
 main {
     flex-grow: 1;
+    text-align: center;
 }
 
- /* Стиль для хедера */
- .header {
+#Base_text{
+    font-size: 60px;
+    font-family:sans-serif;
+    margin-top: 200px;
+    margin-bottom: 40px;
+}
+#Info_button{
+    text-decoration: none;
+    background-color: orangered;
+    padding: 15px 20px;
+    border-radius: 25px;
+    color: white;
+}
+.container-opys{
+    margin-top: 200px;
+    margin-left: 560px;
+    display: flex;
+}
+.container-opys p{
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-left: 5%;
+
+}
+
+/* Стиль для хедера */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +46,7 @@ main {
     background-color: #000000;
     color: #fff;
     border-bottom: 5px solid white;
-    
+
 }
 
 /* Стиль для логотипу */
@@ -49,6 +76,7 @@ main {
     color: #fff;
     font-size: 16px;
     transition: color 0.3s;
+    margin-left: 15px;
 }
 
 .nav-links a:hover {
@@ -91,7 +119,8 @@ footer {
     color: #fff;
     padding: 40px 0;
     flex-shrink: 0;
-    border-top: 5px solid #fff; /* Біла полоса зверху футера */
+    border-top: 5px solid #fff;
+    /* Біла полоса зверху футера */
 }
 
 
@@ -133,5 +162,3 @@ footer {
     display: inline-flex;
     padding-left: 10px;
 }
-
-
