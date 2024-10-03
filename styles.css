@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: #37383C;
@@ -9,26 +13,43 @@ body {
 main {
     flex-grow: 1;
     text-align: center;
+    background: rgb(158,79,210);
+    background: linear-gradient(90deg, rgba(158,79,210,1) 12%, rgba(29,109,253,1) 62%, rgba(69,252,133,1) 100%);
+
+}
+.container-main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#Base_text{
-    font-size: 60px;
-    font-family:sans-serif;
-    margin-top: 200px;
-    margin-bottom: 40px;
-}
-#Info_button{
+#Info_button {
+    display: inline-block;
+    margin: 20px auto; /* Center and add spacing around */
     text-decoration: none;
     background-color: orangered;
     padding: 15px 20px;
     border-radius: 25px;
     color: white;
 }
-.container-opys{
+
+.container-main>h1{
+    font-size: 60px;
+    font-family:sans-serif;
     margin-top: 200px;
-    margin-left: 560px;
-    display: flex;
+    margin-bottom: 40px;
 }
+
+.container-opys {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center; /* Горизонтальне вирівнювання по центру */
+    align-items: center; /* Вертикальне вирівнювання по центру */
+    gap: 20px; /* Відстань між елементами */
+    flex-wrap: wrap; /* Додаємо можливість переносу елементів, якщо вони не вміщуються */
+}
+
 .container-opys p{
     background-color: #ddd;
     padding: 10px 15px;
@@ -37,59 +58,79 @@ main {
 
 }
 
-/* Стиль для хедера */
+/* Основні стилі хедера */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
-    border-bottom: 5px solid white;
-
 }
 
-/* Стиль для логотипу */
 .header .logo {
-    display: flex;
-    align-items: center;
-}
-
-.header .logo img {
-    height: 30px;
-    margin-right: 10px;
-}
-
-.header .logo span {
-    font-size: 18px;
+    outline: 1px solid white;
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* Стиль для навігації */
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-    transition: color 0.3s;
-    margin-left: 15px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 20px; /* Round corners */
 }
 
 .nav-links a:hover {
-    color: #ddd;
+    color: #ddd; /* Change text color on hover */
+    border: 1px solid white; /* White border on hover */
 }
 
-/* Стиль для кнопок */
-.header .buttons {
+
+/* Загальні стилі для випадаючого меню */
+.dropdown-menu {
+    top: 140%;
+    left: 0;
+    background-color: #fff; /* Білий фон */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center; /* Вирівнюємо текст по центру */
+}
+
+/* Для елементів випадаючого меню в один рядок */
+.dropdown-menu a {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #000; /* Колір тексту */
+    display: inline-block;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* При наведенні курсору на елемент */
+.dropdown-menu a:hover {
+    background-color: #5f6066;
+}
+
+/* Відображення меню при активованому класі 'show' */
+.show {
     display: flex;
-    gap: 10px;
+    justify-content: center;
 }
 
-.header .buttons .btn {
+
+
+.buttons .btn {
     padding: 8px 15px;
     border: 2px solid #1e90ff;
     border-radius: 25px;
@@ -100,19 +141,21 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.header .buttons .btn:hover {
+.buttons .btn:hover {
     background-color: #1e90ff;
     color: #fff;
 }
 
-.header .buttons .btn-primary {
+.buttons .btn-primary {
     background-color: #1e90ff;
     color: #fff;
 }
 
-.header .buttons .btn-primary:hover {
+.buttons .btn-primary:hover {
     background-color: #1576d2;
 }
+
+
 
 footer {
     background-color: #000;
@@ -139,6 +182,7 @@ footer {
 
 .footer-logo img {
     width: 400px;
+    
 }
 
 .footer-logo p {
@@ -149,7 +193,6 @@ footer {
 
 .foot-ul li a {
     text-decoration: none;
-    color: white;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -161,4 +204,10 @@ footer {
 .foot-ul {
     display: inline-flex;
     padding-left: 10px;
+}
+a[target="_blank"] {
+    color: rgb(156, 192, 192); /* Тут ти можеш задати будь-який стиль */
+}
+b+i{
+    color:crimson;
 }
