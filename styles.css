@@ -220,3 +220,6 @@ section{
     background: rgb(158,79,210);
     background: linear-gradient(90deg, rgba(158,79,210,1) 12%, rgba(29,109,253,1) 62%, rgba(69,252,133,1) 100%);
 }
+.hh{
+    font-family: 'Times New Roman', Times, serif;
+}
